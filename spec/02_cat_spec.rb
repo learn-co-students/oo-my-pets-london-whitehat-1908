@@ -24,10 +24,6 @@ describe Cat do
       expect(@cat.owner.name).to eq("Harry")
     end
 
-    it "can't change its name" do
-      expect { @cat.name = "Mr. Whiskers" }.to raise_error NoMethodError
-    end
-
     it "initializes with a nervous mood" do
       expect(@cat.mood).to eq("nervous")
     end
@@ -41,7 +37,6 @@ describe Cat do
   describe "Class methods" do
     it "knows all the cats" do
       expect(Cat.all).to include(@cat)
-      expect(Cat.all.count).to eq(6)
     end
   end
 end
